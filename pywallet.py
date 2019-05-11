@@ -72,7 +72,7 @@ import os.path
 import platform
 
 max_version = 81000
-addrtype = 0
+addrtype = 55
 json_db = {}
 private_keys = []
 private_hex_keys = []
@@ -87,6 +87,7 @@ aversions[0] = 'Bitcoin';
 aversions[48] = 'Litecoin';
 aversions[52] = 'Namecoin';
 aversions[111] = 'Testnet';
+aversions[55] = 'Pandacoin';
 
 wallet_dir = ""
 wallet_name = ""
@@ -122,7 +123,7 @@ def determine_db_dir():
 			return os.path.expanduser("~/Library/Application Support/Bitcoin/")
 		elif platform.system() == "Windows":
 			return os.path.join(os.environ['APPDATA'], "Bitcoin")
-		return os.path.expanduser("~/.bitcoin")
+		return os.path.expanduser("/home/PandaBank/.pandacoin")
 	else:
 		return wallet_dir
 
@@ -4656,7 +4657,7 @@ if 'twisted' not in missing_dep:
 
 def update_pyw():
 	if md5_last_pywallet[0] and md5_last_pywallet[1] not in md5_pywallet:
-		dl=urllib.urlopen('https://raw.github.com/jackjack-jj/pywallet/master/pywallet.py').read()
+		dl=urllib.urlopen('https://raw.githubusercontent.com/DigitalPandacoin/pywallet/master/pywallet.py').read()
 		if len(dl)>40 and md5_2(dl)==md5_last_pywallet[1]:
 			filout = open(pyw_path+"/"+pyw_filename, 'w')
 			filout.write(dl)
@@ -4729,7 +4730,7 @@ md5_last_pywallet = [False, ""]
 
 def retrieve_last_pywallet_md5():
 	global md5_last_pywallet
-	md5_last_pywallet = [True, md5_onlinefile('https://raw.github.com/jackjack-jj/pywallet/master/pywallet.py')]
+	md5_last_pywallet = [True, md5_onlinefile('https://raw.githubusercontent.com/DigitalPandacoin/pywallet/master/pywallet.py')]
 
 from optparse import OptionParser
 
