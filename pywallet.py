@@ -3402,7 +3402,7 @@ if 'twisted' not in missing_dep:
 				DWForm = WI_FormInit('Dump your wallet:', 'DumpWallet', 'divformdw') + \
 							WI_InputText('Wallet Directory: ', 'dir', 'dwf-dir', determine_db_dir()) + \
 							WI_InputText('Wallet Filename: ', 'name', 'dwf-name', determine_db_name(), 20) + \
-							WI_InputText('<span style="border: 0 dashed;border-bottom-width:1px;" title="0 for Bitcoin, 52 for Namecoin, 111 for testnets">Version</span>:', 'vers', 'dwf-vers', '0', 1) + \
+							WI_InputText('<span style="border: 0 dashed;border-bottom-width:1px;" title="0 for Bitcoin, 52 for Namecoin, 111 for testnets">Version</span>:', 'vers', 'dwf-vers', '55', 1) + \
 							WI_Checkbox('bal', 'y', 'dwf-bal', '', ' Dump with balance (can take minutes)') + "<br />" + \
 							WI_Submit('Dump wallet', 'DWDiv', 'dwf-close', 'ajaxDW') + \
 							WI_CloseButton('DWDiv', 'dwf-close') + \
@@ -3428,7 +3428,7 @@ if 'twisted' not in missing_dep:
 				DKForm = WI_FormInit('Dump your keys:', 'DumpKeys', 'divformdk') + \
 							WI_InputText('Wallet Directory: ', 'dir', 'dkf-dir', determine_db_dir()) + \
 							WI_InputText('Wallet Filename: ', 'name', 'dkf-name', determine_db_name(), 20) + \
-							WI_InputText('<span style="border: 0 dashed;border-bottom-width:1px;" title="0 for Bitcoin, 52 for Namecoin, 111 for testnets">Version</span>:', 'vers', 'dkf-vers', '0', 1) + \
+							WI_InputText('<span style="border: 0 dashed;border-bottom-width:1px;" title="0 for Bitcoin, 52 for Namecoin, 111 for testnets">Version</span>:', 'vers', 'dkf-vers', '55', 1) + \
 							WI_InputText('Output file: ', 'file', 'dkf-file', '', 60) + \
 							WI_InputText('<span style="border: 0 dashed;border-bottom-width:1px;" title="to be chosen from the ones in wallet dump, separated with \',\', e.g. \'addr,secret\'">Data to print: </span>', 'keys', 'dkf-keys', '') + \
 							WI_Checkbox('bal', 'y', 'dkf-bal', '', ' Dump with balance (can take minutes)') + "<br />" + \
@@ -3466,7 +3466,7 @@ if 'twisted' not in missing_dep:
 							prehide_ecdsa + WI_InputText('Message: ', 'msg', 'if-msg', '', 30) + posthide_ecdsa + \
 							prehide_ecdsa + WI_InputText('Signature: ', 'sig', 'if-sig', '', 30) + posthide_ecdsa + \
 							prehide_ecdsa + WI_InputText('Pubkey: ', 'pubkey', 'if-pubkey', '', 30) + posthide_ecdsa + \
-							WI_InputText('<span style="border: 0 dashed;border-bottom-width:1px;" title="0 for Bitcoin, 52 for Namecoin, 111 for testnets">Version</span>:', 'vers', 'if-vers', '0', 1) + \
+							WI_InputText('<span style="border: 0 dashed;border-bottom-width:1px;" title="0 for Bitcoin, 52 for Namecoin, 111 for testnets">Version</span>:', 'vers', 'if-vers', '55', 1) + \
 							"Format:<br />" + \
 							WI_RadioButton('format', 'reg', 'if-reg', 'CHECKED', ' Regular, base 58') + \
 							WI_RadioButton('format', 'hex', 'if-hex', '', ' Hexadecimal, 64 characters long') + \
@@ -3486,7 +3486,7 @@ if 'twisted' not in missing_dep:
 							WI_InputText('Key:', 'key', 'impf-key', '', 65) + \
 							WI_InputText('Label:', 'label', 'impf-label', '') + \
 							WI_Checkbox('reserve', 'true', 'impf-reserve', 'onClick="document.getElementById(\'impf-label\').disabled=document.getElementById(\'impf-reserve\').checked"', ' Reserve') + "<br />" + \
-							WI_InputText('<span style="border: 0 dashed;border-bottom-width:1px;" title="0 for Bitcoin, 52 for Namecoin, 111 for testnets">Version</span>:', 'vers', 'impf-vers', '0', 1) + \
+							WI_InputText('<span style="border: 0 dashed;border-bottom-width:1px;" title="0 for Bitcoin, 52 for Namecoin, 111 for testnets">Version</span>:', 'vers', 'impf-vers', '55', 1) + \
 							"Format:<br />" + \
 							WI_Checkbox('format', 'hex', 'impf-hex', '', ' Hexadecimal, instead of base58') + "<br />" + \
 							WI_Checkbox('format', 'cry', 'impf-cry', 'hidden=true', '<!-- Crypt-->') + \
